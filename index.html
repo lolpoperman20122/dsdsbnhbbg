@@ -1,114 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proxy Site</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icons/128.png" />
 
-        #proxyForm {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f7f7f7;
-        }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f59e0b" />
+    <title>Radon Games</title>
+    <meta property="og:title" content="Radon Games" />
+    <meta property="og:image" content="/icons/128.png" />
+    <meta
+      name="description"
+      content="An open-source unblocked games website built with simplicity in mind."
+    />
+    <meta
+      property="og:description"
+      content="An open-source unblocked games website built with simplicity in mind."
+    />
+    <meta
+      name="keywords"
+      content="radon,games,radon games,unblocked,unblocked games,html games,html5 games,flash games,flashplayer games,proxy,io"
+    />
 
-        #proxyForm h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    <!-- Google Products -->
+    <script
+      defer
+      crossorigin="anonymous"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8517735295733237"
+    ></script>
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-0GR0HN1RFL"
+    ></script>
 
-        #proxyForm .form-group {
-            margin-bottom: 20px;
-        }
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        #proxyForm .form-group label {
-            font-weight: bold;
-        }
-
-        #proxyForm .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #proxyForm .form-group button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        #proxyForm .form-group button:hover {
-            background-color: #0056b3;
-        }
-
-        #proxyResult {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f7f7f7;
-        }
-
-        #proxyResult h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #proxyResult .alert {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Proxy Form -->
-    <div id="proxyForm" class="container mt-5">
-        <h2>Proxy Site</h2>
-        <form id="proxySiteForm">
-            <div class="form-group">
-                <label for="siteUrl">Enter Site URL:</label>
-                <input type="text" class="form-control" id="siteUrl" placeholder="https://www.example.com" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Access Site</button>
-        </form>
-    </div>
-
-    <!-- Proxy Result -->
-    <div id="proxyResult" class="container mt-5" style="display: none;">
-        <h2>Proxy Result</h2>
-        <div id="proxyAlert" class="alert alert-info" role="alert">
-            Loading...
-        </div>
-        <iframe id="proxyFrame" src="" frameborder="0" width="100%" height="500"></iframe>
-    </div>
-
-    <!-- Bootstrap & jQuery JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        $(document).ready(function() {
-            $('#proxySiteForm').submit(function(e) {
-                e.preventDefault();
-                var siteUrl = $('#siteUrl').val();
-                $('#proxyResult').show();
-                $('#proxyFrame').attr('src', 'https://cors-anywhere.herokuapp.com/' + siteUrl);
-            });
-        });
+      gtag("config", "G-0GR0HN1RFL");
     </script>
-</body>
+
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+  </head>
+  <body class="scroll-smooth bg-bg-primary font-medium text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
